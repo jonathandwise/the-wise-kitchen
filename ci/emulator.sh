@@ -10,6 +10,9 @@ SDK="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-/usr/local/lib/android/sdk}}"
 export PATH="$SDK/cmdline-tools/latest/bin:$SDK/emulator:$SDK/platform-tools:$PATH"
 IMG="system-images;android-33;google_apis;x86_64"
 echo "SDK=$SDK"; ls -l /dev/kvm || echo "no /dev/kvm"
+# The runner's disk is tight for an emulator: clear big tools this job doesn't use.
+sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /usr/local/share/boost /usr/local/lib/android/sdk/ndk "${AGENT_TOOLSDIRECTORY:-/nonexistent}" 2>/dev/null || true
+df -h "$HOME" | tail -1
 
 export ANDROID_USER_HOME="$HOME/.android"
 export ANDROID_AVD_HOME="$HOME/.android/avd"
@@ -22,11 +25,12 @@ echo no | avdmanager create avd -n phone -k "$IMG" -d pixel_6 --force || { echo 
 INI=$(find "$HOME" /root -name phone.ini 2>/dev/null | head -1)
 echo "phone.ini at: ${INI:-not found}"
 [ -n "$INI" ] && export ANDROID_AVD_HOME="$(dirname "$INI")"
+[ -n "$INI" ] && CFG="$(dirname "$INI")/phone.avd/config.ini" && echo "disk.dataPartition.size=2048M" >> "$CFG"
 emulator -version | head -1
 emulator -list-avds
 
 nohup emulator -avd phone -no-window -no-snapshot -no-audio -no-boot-anim -gpu swiftshader_indirect \
-  -camera-back none -memory 3072 > results/emulator-log.txt 2>&1 &
+  -camera-back none -memory 3072 -partition-size 2048 -no-metrics > results/emulator-log.txt 2>&1 &
 EMU=$!
 
 adb start-server
