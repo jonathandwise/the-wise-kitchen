@@ -1,10 +1,8 @@
 name: Cookbook PDF
 
 # Rebuilds "The Wise Kitchen.pdf" whenever the recipes change and the PDF wasn't updated with them.
+# Paused: being switched to the original cookbook generator so the PDF keeps its original layout.
 on:
-  push:
-    branches: [main]
-    paths: ["cookbook/**", "data/**", "tools/**"]
   workflow_dispatch:
 
 permissions:
