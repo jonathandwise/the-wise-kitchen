@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- steam -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="@color/launcher_fg"
+        android:strokeWidth="3.2"
+        android:strokeLineCap="round"
+        android:pathData="M44,40 C40,35 48,32 44,27 M54,40 C50,35 58,32 54,27 M64,40 C60,35 68,32 64,27" />
+    <!-- lid -->
+    <path
+        android:fillColor="@color/launcher_fg"
+        android:pathData="M31,47 L77,47 C78.7,47 80,48.3 80,50 L80,51 C80,52.1 79.1,53 78,53 L30,53 C28.9,53 28,52.1 28,51 L28,50 C28,48.3 29.3,47 31,47 Z" />
+    <path
+        android:fillColor="@color/launcher_fg"
+        android:pathData="M50,43 L58,43 C59.1,43 60,43.9 60,45 L60,47 L48,47 L48,45 C48,43.9 48.9,43 50,43 Z" />
+    <!-- pot body -->
+    <path
+        android:fillColor="@color/launcher_fg"
+        android:pathData="M32,56 L76,56 L73,76 C72.6,78.8 70.3,81 67.4,81 L40.6,81 C37.7,81 35.4,78.8 35,76 Z" />
+    <!-- handles -->
+    <path
+        android:fillColor="@color/launcher_fg"
+        android:pathData="M24,58 L32,58 L32,63 L24,63 C22.6,63 21.5,61.9 21.5,60.5 C21.5,59.1 22.6,58 24,58 Z" />
+    <path
+        android:fillColor="@color/launcher_fg"
+        android:pathData="M76,58 L84,58 C85.4,58 86.5,59.1 86.5,60.5 C86.5,61.9 85.4,63 84,63 L76,63 Z" />
+</vector>

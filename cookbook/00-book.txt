@@ -1,0 +1,5 @@
+#book The Wise Kitchen
+#about Every recipe and kitchen note here comes from the Food/Recipes folder in Jonathan's bookmarks, gathered in November 2026: 91 recipes and 8 reference guides.
+#about Each recipe has been rewritten into the same layout, with ingredients, numbered steps and a few tips, and the original source just under the title. Blog stories and photos are left out, so visit the source if you want them.
+#about Quantities are as the original gave them (US cups and spoons, plus grams where the source used them). Temperatures are in °F with °C alongside. A few recipes come from YouTube videos; for those, the ingredients and steps were taken from the video and its description.
+#about Only two bookmarks didn't make it in: Perfectly Crispy Bacon, a short Imgur clip that couldn't be opened while the book was being made; and Shaping Into A Pie, a pizza-dough shaping video that went offline when YouTube closed the channel that posted it.

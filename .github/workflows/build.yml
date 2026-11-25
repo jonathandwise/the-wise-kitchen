@@ -1,0 +1,209 @@
+name: Build, test and release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    outputs:
+      version: ${{ steps.ver.outputs.version }}
+      signing: ${{ steps.sign.outputs.signing }}
+    env:
+      KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
+      KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+      KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+      KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the recipe data
+        run: python3 tools/build_cookbook.py --check
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+
+      - name: Version
+        id: ver
+        run: |
+          V=$(grep -oP 'val appVersion = "\K[0-9]+\.[0-9]+\.[0-9]+' app/build.gradle.kts)
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+          echo "Version $V"
+
+      - name: Restore signing key
+        id: sign
+        run: |
+          SIGNING="temporary"
+          if [ -n "$KEYSTORE_B64" ]; then
+            if echo "$KEYSTORE_B64" | tr -d ' \n\r' | base64 -d > "$RUNNER_TEMP/release.jks" 2>/dev/null \
+               && keytool -list -keystore "$RUNNER_TEMP/release.jks" -storepass "$KEYSTORE_PASSWORD" -alias "$KEY_ALIAS" >/dev/null 2>&1; then
+              SIGNING="permanent"
+            else
+              rm -f "$RUNNER_TEMP/release.jks"
+              echo "::warning::The signing secrets are set but don't open the key: check the four values."
+            fi
+          else
+            echo "::warning::Signing secrets aren't set: this build uses a throwaway key and won't be released."
+          fi
+          echo "signing=$SIGNING" >> "$GITHUB_OUTPUT"
+
+      - name: Unit tests and release APK
+        env:
+          KEYSTORE_PATH: ${{ runner.temp }}/release.jks
+        run: |
+          set -o pipefail
+          mkdir -p out
+          gradle testDebugUnitTest assembleRelease --stacktrace 2>&1 | tee out/build-log.txt
+          cp app/build/outputs/apk/release/*.apk out/WiseKitchen.apk
+          {
+            echo "version: ${{ steps.ver.outputs.version }}"
+            echo "commit: ${{ github.sha }}"
+            echo "signing: ${{ steps.sign.outputs.signing }}"
+            echo "size: $(stat -c %s out/WiseKitchen.apk) bytes"
+          } > out/build-info.txt
+          cat out/build-info.txt
+
+      # When the build fails, its log goes to the "ci-logs" branch so it can be read without the GitHub API.
+      - name: Publish the failed build's log
+        if: failure()
+        run: |
+          mkdir -p logs
+          cp out/build-log.txt logs/ 2>/dev/null || echo "no log" > logs/build-log.txt
+          cp -r app/build/reports/tests logs/test-reports 2>/dev/null || true
+          cp -r app/build/test-results logs/test-results 2>/dev/null || true
+          echo "Build failed for ${{ github.sha }}" > logs/README.txt
+          cd logs
+          git init -q -b ci-logs
+          git add .
+          git -c user.name="Wise Kitchen build" -c user.email="actions@users.noreply.github.com" commit -qm "Failed build ${{ github.sha }}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" ci-logs
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WiseKitchen-apk
+          path: out/
+          retention-days: 30
+
+      - name: Publish the APK to the "builds" branch
+        run: |
+          cd out
+          rm -f build-log.txt
+          git init -q -b builds
+          git add .
+          git -c user.name="Wise Kitchen build" -c user.email="actions@users.noreply.github.com" commit -qm "Wise Kitchen ${{ steps.ver.outputs.version }} (${{ github.sha }})"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" builds
+
+  emulator-test:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: WiseKitchen-apk
+          path: out
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Run Wise Kitchen on a phone emulator (Android 13)
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: python3 ci/e2e.py results out/WiseKitchen.apk
+
+      - name: Publish screenshots and logs to the "test-results" branch
+        if: always()
+        run: |
+          mkdir -p results
+          cp out/build-info.txt results/ 2>/dev/null || true
+          cd results
+          git init -q -b test-results
+          git add .
+          git -c user.name="Wise Kitchen build" -c user.email="actions@users.noreply.github.com" commit -qm "Emulator test for ${{ github.sha }}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" test-results
+
+  # Publishes a GitHub release (which the app's updater reads) for a version that doesn't have
+  # one yet, once the emulator test passed and the build is signed with the permanent key.
+  release:
+    needs: [build, emulator-test]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      V: ${{ needs.build.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: WiseKitchen-apk
+          path: out
+
+      - name: Publish release
+        run: |
+          if [ "${{ needs.build.outputs.signing }}" != "permanent" ]; then
+            echo "::warning::Not released: add the signing secrets (KEYSTORE_B64, KEYSTORE_PASSWORD, KEY_ALIAS, KEY_PASSWORD)."
+            exit 0
+          fi
+          if gh release view "v$V" >/dev/null 2>&1; then
+            echo "v$V is already released; bump appVersion in app/build.gradle.kts to release again."
+            exit 0
+          fi
+          mkdir rel
+          cp out/WiseKitchen.apk "rel/WiseKitchen-$V.apk"
+          # Release notes: this version's section of CHANGELOG.md.
+          awk -v v="$V" '$0 ~ "^## "v"$" {on=1; next} /^## / {on=0} on' CHANGELOG.md | sed '/^\s*$/d' > rel/notes.md
+          [ -s rel/notes.md ] || echo "Wise Kitchen $V" > rel/notes.md
+          python3 - "$V" "rel/WiseKitchen-$V.apk" rel/notes.md > rel/latest.json <<'PY'
+          import hashlib, json, os, sys
+          v, apk, notes = sys.argv[1:4]
+          a, b, c = (int(x) for x in v.split("."))
+          text = open(notes).read().strip()
+          def notes_text(t):
+              out = ""
+              for l in t.splitlines():
+                  l = l.lstrip("-* ").strip()
+                  if len(out) + len(l) > 700:
+                      break
+                  out += ("\n" if out else "") + l
+              return out
+          print(json.dumps({
+              "versionCode": a * 10000 + b * 100 + c,
+              "versionName": v,
+              "apk": os.path.basename(apk),
+              "sha256": hashlib.sha256(open(apk, "rb").read()).hexdigest(),
+              "size": os.path.getsize(apk),
+              "notes": notes_text(text),
+          }, indent=2))
+          PY
+          cat rel/latest.json
+          gh release create "v$V" "rel/WiseKitchen-$V.apk" rel/latest.json \
+            --title "Wise Kitchen $V" --notes-file rel/notes.md --target "${{ github.sha }}"
+          echo "Released v$V"

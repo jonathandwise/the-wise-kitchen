@@ -1,0 +1,269 @@
+#chapter Kitchen Reference
+#blurb Sous vide temperatures and times for everything, then steak and pork chops in detail; four ways to cook top sirloin; two restaurant techniques for salmon and what "sushi-grade" really means; and how to rescue scorched and ceramic pans.
+
+= Sous Vide Cheat Sheet
+kind: guide
+from: Douglas Baldwin, A Practical Guide to Sous Vide Cooking | douglasbaldwin.com
+note: Water-bath temperatures by doneness, how long food takes to heat through, and how long it takes to become safe (pasteurized). Times assume the food starts at fridge temperature (41°F / 5°C).
+[Section: Steak, lamb and other tender red meat]
+|! Doneness | Water bath
+| Very rare | 120°F (49°C)
+| Rare | 125°F (51.5°C)
+| Medium-rare | 130°F (54.5°C)
+| Medium | 140°F (60°C)
+[Section: Pork]
+|! Cut | Water bath | Time | Optional brine first
+| Chops, classic | 141°F (61°C) | See the safety table below | 1–2 hr in 7% salt, 3% sugar
+| Thick chops, slow-cooked | 131°F (55°C) | 12 hr | —
+| Shoulder (pulled pork) | 176°F (80°C), or 155°F (68°C) | 8–12 hr, or 24 hr | 6–12 hr in 7–10% salt, 0–3% sugar
+| Spare ribs | 176°F (80°C), or 155°F (68°C) | 8–12 hr, or 24 hr | 12–24 hr in 7–10% salt, 0–3% sugar; torch the top afterwards
+p: Pork can safely go as low as 130°F (54.5°C), but brining is recommended if you cook it that low.
+[Section: Chicken, turkey and duck]
+|! Cut | Water bath
+| Breast | 140–150°F (60–65°C); 146°F (63.5°C) is a good middle ground
+| Leg confit (turkey, duck or goose) | 176°F (80°C)
+[Section: Fish]
+|! Fish | Water bath
+| Most fish and shellfish | 120°F (49°C) medium-rare to 140°F (60°C) medium
+| Salmon | 108°F (42°C) rare · 122°F (50°C) medium-rare · 140°F (60°C) medium
+| Tuna | 100°F (38°C) very rare to 110°F (43.5°C) rare
+[Section: Eggs]
+|! Style | Water bath and time
+| Soft, custardy "perfect" egg | 148°F (64.5°C) for 45–60 min
+| Pasteurized in the shell | 135°F (57°C) for at least 1 hr 15 min
+p: Vegetables need much hotter water than meat, so cook them in a separate bath.
+[Section: How long to heat through]
+p: Time for the center of a slab-shaped piece (steak, chop, fillet) to reach the bath temperature.
+|! Thickness | From the fridge | From frozen
+| 10 mm (about ⅜ in) | 19 min | 30 min
+| 20 mm (about ¾ in) | 50 min | 1¼ hr
+p: Thicker pieces take a lot longer. The full tables in the guide run from 5 mm to 115 mm.
+[Section: How long to make it safe]
+p: Minimum time in the bath to pasteurize, by thickness.
+h: Beef, pork and lamb
+|! Thickness | At 131°F (55°C) | At 140°F (60°C)
+| 5 mm (about 3/16 in) | 2 hr | 30 min
+| 10 mm (about ⅜ in) | 2 hr | 40 min
+| 20 mm (about ¾ in) | 2½ hr | 1¼ hr
+| 30 mm (about 1¼ in) | 3 hr | 1½ hr
+| 50 mm (about 2 in) | 4½ hr | 2½ hr
+h: Chicken and turkey
+|! Thickness | At 140°F (60°C) | At 145.5°F (63°C)
+| 5 mm | 45 min | 18 min
+| 10 mm | 55 min | 30 min
+| 20 mm | 1¼ hr | 50 min
+| 30 mm | 2 hr | 1½ hr
+h: Fish
+|! Thickness | Lean, 131°F | Lean, 140°F | Fatty, 131°F | Fatty, 140°F
+| 5 mm | 2½ hr | 30 min | 4¼ hr | 40 min
+| 10 mm | 2¾ hr | 35 min | 4¼ hr | 50 min
+| 20 mm | 3 hr | 1 hr | 4¾ hr | 1¼ hr
+| 30 mm | 3¾ hr | 1¾ hr | 5¼ hr | 2 hr
+p: Very rare steak and fish cooked below 130°F (54.5°C) never get pasteurized, so use very fresh, good-quality ingredients and serve them right away.
+
+= Sous Vide Steak
+kind: guide
+from: Serious Eats · The Food Lab, J. Kenji López-Alt | seriouseats.com
+note: Sous vide takes the guesswork out of steak. The water bath brings the meat to exactly the temperature you choose, so it's evenly cooked from edge to edge with no overcooked band under the crust. It also frees up your schedule: a cooked steak can wait in the bath for a few hours until you're ready to sear and serve.
+[Section]
+p: It's a two-step process. First the sealed steak cooks in the bath to its final temperature, then it gets a hard sear for color, flavor and softened, rendered fat.
+[Section: Choosing a steak]
+- Any cut works, from tender steaks (tenderloin, strip, rib-eye, porterhouse) to butcher's cuts (hanger, flap, skirt).
+- Buy thick: at least 1½ inches, ideally 2. Thin steaks overcook before they can brown, even after sous vide. A steak that thick weighs 12–16 oz, so plan on one big steak for every two people rather than a small one each.
+[Section: Picking a temperature]
+p: The bath temperature sets the doneness, and the hotter a steak gets, the more juice it loses. In Kenji's test, a well-done (160°F) steak gave up more than ten times as much juice as a rare one. He recommends staying in the rare-to-medium range.
+|! Doneness | Bath | What to expect
+| Rare | 120°F (49°C) | Barely cooked, soft and slippery, with unrendered fat. Best saved for lean tenderloin.
+| Medium-rare | 129°F (54°C) | Still red but firmer, with a cleaner bite. Good for every cut.
+| Medium | 135°F (57°C) | Rosy pink. Loses more juice, but a well-marbled steak's softened fat makes up for it. Also suits coarse cuts like hanger, skirt and flap.
+| Medium-well | 145°F (63°C) | Drier and grainy. If you must, use rich cuts like short rib, skirt or hanger.
+| Well-done | 156°F (69°C) and up | No real reason to use sous vide. Just grill or pan-roast.
+[Section: Times]
+p: Times are for steaks 1½–2 inches thick. A steak 1 inch thick or less needs as little as 40 minutes (30 for tenderloin). For food safety, don't keep steak in a bath below 130°F (54°C) for more than 2½ hours.
+h: Strip, rib-eye, porterhouse, T-bone and butcher's cuts
+|! Doneness | Bath | Time
+| Very rare to rare | 120–128°F (49–53°C) | 1–2½ hr
+| Medium-rare | 129–134°F (54–57°C) | 1–4 hr (2½ hr max under 130°F)
+| Medium | 135–144°F (57–62°C) | 1–4 hr
+| Medium-well | 145–155°F (63–68°C) | 1–3½ hr
+| Well-done | 156°F (69°C) and up | 1–3 hr
+h: Tenderloin
+|! Doneness | Bath | Time
+| Very rare to rare | 120–128°F (49–53°C) | 45 min–2½ hr
+| Medium-rare | 129–134°F (54–57°C) | 45 min–4 hr (2½ hr max under 130°F)
+| Medium | 135–144°F (57–62°C) | 45 min–4 hr
+| Medium-well | 145–155°F (63–68°C) | 45 min–3½ hr
+| Well-done | 156°F (69°C) and up | 1–3 hr
+- Well-marbled steaks like a prime rib-eye or strip are best a few degrees warmer than lean ones; Kenji likes them at 129–135°F (54–57°C). Lean tenderloin dries out easily, so he cooks it cooler, at 120–128°F (49–53°C).
+- A porterhouse or T-bone has strip on one side of the bone and tenderloin on the other. Choose the temperature for the side you like better (Kenji goes with the strip).
+- A steak can't sit in the bath forever. Enzymes keep working, and the biggest changes happen between 4 and 24 hours: by 24 hours the meat is still juicy but shreds apart instead of chewing like steak.
+[Section: Step by step]
+n: **Preheat** the water bath to your target temperature and let it get there before the steak goes in.
+n: **Season** the steak generously with salt and pepper, edges included.
+n: **Add aromatics** if you like: a few sprigs of thyme or rosemary in the bag, on both sides of the steak.
+n: **Seal** it with a vacuum sealer, or in a zipper-lock bag using water displacement: lower the bagged steak slowly into a pot of water so the pressure pushes the air out, then seal it just above the waterline.
+n: **Cook.** Drop the bag into the bath, keeping it clear of the circulator's intake and outlet. A well-sealed bag sinks. Cook according to the charts above.
+n: **Dry.** Take the steak out of the bag and pat it very dry on both sides with paper towels.
+[Section: Searing on the stovetop]
+n: Turn on the vent and open a window. Heat 1 tbsp vegetable, canola or rice bran oil in a heavy cast-iron or stainless steel skillet over your hottest burner until it smokes.
+n: Lay in the steak. For a darker, steakhouse-style crust, add 1 tbsp butter now: its milk solids brown fast and add a slightly bitter, charred note. Leave it out for a cleaner-tasting sear.
+n: Add aromatics if you like: thyme or rosemary sprigs, sliced shallots or crushed garlic cloves.
+n: Flip the steak every 15–30 seconds until it's well browned, about 1½ minutes in all. If you skipped the butter, add it about 30 seconds before the end.
+n: Hold the steak on its side with tongs and roll it to brown all the edges, about 45 seconds more.
+n: Move it to a wire rack set over a rimmed baking sheet. It doesn't need to rest, but it can wait while you get everything else to the table. Just before serving, heat the fat and juices left in the pan until sizzling and pour them over the steak to re-crisp it. Serve right away with flaky salt such as Maldon.
+p: **Got a torch?** A high-output torch adds extra char. Right after each flip, sweep it slowly back and forth over the top of the steak until it's pale brown with a few darker spots, while the pan works on the bottom. Kenji suggests an Iwatani trigger head on a butane canister, or a Searzall attachment on a propane torch.
+[Section: Searing on the grill]
+- For a cookout, cook the steaks at home, then pour the hot bath water and the bagged steaks into a cooler, close it and take it along to the grill.
+- The goal is to sear hard and fast, so the outside browns before the inside overcooks. Light a full chimney of charcoal, and when it's covered in gray ash, pile the coals on one side of the grill; cover and preheat for 5 minutes. On a gas grill, turn half the burners to high, cover and preheat for 10 minutes.
+- Scrape the grates clean and oil them, then sear the steaks over the hottest part of the grill, turning often, until well browned.
+
+= Sous Vide Pork Chops
+kind: guide
+from: r/sousvide on Reddit | reddit.com
+note: A thread asking whether a thick boneless pork chop is worth cooking sous vide got a near-unanimous yes: lean chops that dry out in a skillet come out evenly cooked and juicy. Here's where the advice landed.
+[Section: Temperature and time]
+|! Result | Water bath | Time (fresh chops)
+| Pink and very juicy | 134–137°F (57–58°C) | 1–2 hr
+| A hint of pink | 140–141°F (60–61°C) | 1½–2 hr
+| Little or no pink | 144–145°F (62–63°C) | 2 hr
+- 137°F came up most often as the sweet spot. Several people found 145°F a bit dry; others prefer its firmer texture.
+- About 2 hours is plenty for fresh chops; allow about 3 hours from frozen. A few people go longer (3–4 hours at 136–138°F) for a softer texture, and a few say 45–60 minutes is enough.
+- Thickness matters. Chops 1½–2 inches thick benefit most; under an inch, a hot skillet does the job.
+- For full pasteurization, use the times in the Sous Vide Cheat Sheet. A 2-inch chop needs about 2½ hours at 140°F (60°C).
+[Section: Brine first (optional)]
+p: The most-upvoted approach: brine for about 12 hours (even a few hours helps), then cook at 137°F for about 2 hours. Here's the basic pork brine shared in the thread:
+- ¼ cup kosher salt
+- ½ cup dark brown sugar
+- Optional: 1 tsp peppercorns, 1 tsp mustard seeds, 2 bay leaves, 3 garlic cloves, 2 tbsp soy or Worcestershire sauce
+- 4 cups water, or 2 cups other liquid (the poster uses apple cider vinegar) plus 2 cups ice
+p: Warm 1 cup of the liquid and stir in the salt and sugar until dissolved, then add the rest of the liquid (or the ice). The brine must be completely cold before the pork goes in.
+p: No time to wet-brine? Salt the chops (with pepper, garlic powder, sage or thyme if you like) and leave them uncovered in the fridge for an hour or two.
+[Section: Finishing]
+- Pat the chops dry (one cook chills them uncovered for 10 minutes first), then sear hard and fast in a very hot pan or on the grill, about 30–60 seconds a side. Basting with butter and herbs is a popular finish.
+- There's no need to rest them after a sous vide cook.
+[Section: Mustard-chive butter]
+p: Shared in the thread to melt over the seared chops. Mash together 4 tbsp softened unsalted butter, 2 tbsp minced fresh chives, 1 tbsp whole-grain mustard, 1 tsp lemon juice, ⅛ tsp cayenne, ⅛ tsp salt and some pepper. Spoon it onto the chops as they come off the heat.
+p: More ideas from the thread: a maple, ginger and rosemary brine served with a 50/50 Dijon and maple sauce (cooked at 134°F for 1½–2 hours); or chill the cooked chops in an ice bath, then bread them and fry 2 minutes a side.
+
+= Cooking Top Sirloin
+kind: guide
+from: wikiHow · with chef Ollie George Cigliano | wikihow.com
+note: Top sirloin is well marbled, affordable and usually big enough to feed a family, and it takes well to almost any cooking method. Here are four.
+[Section: Before you cook]
+- **Buy** ¼–½ lb per person. Choose steaks at least 1 inch thick, ideally 2, since thin ones dry out. Look for deep red meat with good marbling and a band of white fat around the edge.
+- **Don't rinse it.** Rinsing raw meat spreads bacteria around the kitchen. If the steak is wet, pat it dry with paper towels, throw them away and wash your hands. For a better crust, leave it uncovered on a plate in the fridge overnight to dry out.
+- **Season** with plenty of salt and pepper on both sides. For variety, add garlic powder, cayenne, chili powder or Italian seasoning.
+- **Marinate** if you like, in a store-bought marinade or equal parts oil and vinegar with spices, in a zip-top bag for 2–4 hours (the full 4 for thick steaks). Pat it dry before cooking.
+- **Temper.** Let the steak sit at room temperature for an hour before cooking so it cooks more evenly.
+[Section: Pan-fried]
+n: Cut the steak into serving-size portions.
+n: Heat 1–2 tsp oil in a cast-iron skillet or frying pan over medium-high heat until smoking hot.
+n: Add the steaks, in batches if needed so they aren't crowded. Turn them after 15 seconds, then every 30 seconds as the crust builds. Cook about 1½ minutes per side in total for rare, 2 minutes for medium-rare, 2½ minutes for medium-well, or 3 minutes or more for well-done.
+n: Rest the steaks for 3 minutes, then serve hot.
+[Section: Grilled]
+n: Cut the steak into portions. Oil the grill and preheat it to medium-high, but no hotter, or the outside will char before the middle cooks.
+n: Grill about 4 minutes, until the first side has grill marks and a brown crust, then flip and grill about 4 minutes more. A medium-rare steak reads 125–130°F (52–54°C) in the thickest part.
+n: Rest for 5 minutes under a loose tent of foil, then slice against the grain.
+[Section: Broiled]
+n: Heat the oven or broiler to 500°F (260°C). Coat a broiler pan with nonstick spray and set the seasoned steak on it.
+n: Broil 2–3 inches from the heat for about 5–6 minutes for a 2-inch steak, then flip and broil 5–6 minutes more.
+p: For a thicker crust, sear each side in a skillet over medium heat for 2–3 minutes before it goes under the broiler.
+[Section: Roasted]
+n: Heat the oven to 400°F (200°C). Set the seasoned steak in a shallow roasting pan.
+n: Roast uncovered. The guide allows 40–50 minutes, but thickness makes a big difference, so start checking with a thermometer well before that.
+n: Rest for 3 minutes before serving.
+[Section: When is it done?]
+p: Times vary with the size of the cut, so a meat thermometer in the thickest part is the surest test. Take the steak off the heat at:
+|! Doneness | Remove at
+| Medium-rare | 125–130°F (52–54°C)
+| Medium | 135–140°F (57–60°C)
+| Medium-well | 145–150°F (63–66°C)
+| Well-done | 155–160°F (68–71°C)
+p: The USDA's safe minimum for steaks is 145°F (63°C), followed by a 3-minute rest.
+
+= Two Restaurant Techniques for Salmon
+kind: guide
+from: Parker Hallberg on YouTube | youtube.com
+note: **Before either one:** Run a finger along the fillet to find pin bones and pull them out with tweezers, tugging in the direction they lie so you don't tear the flesh. Scrape the skin with the back of a knife to catch any stray scales.
+[Section: Butter-baked (the way Addison does it)]
+n: **Cure.** Salt the salmon lightly and evenly, then leave it uncovered on the top shelf of the fridge for 1–2 days. It firms up, darkens and grows a slightly tacky skin (a pellicle), and the flavor concentrates.
+n: **Trim.** Square off the edges and round the corners. A main course is 6–8 oz; in a three-course meal, 5–6 oz; on a long tasting menu, 3–4 oz.
+n: **Bake.** Lay a slice of butter on a baking tray, set the fish on it and top it with another slice. (Dairy-free: oil the tray and coat the fish in extra-virgin olive oil instead.) Bake at 225°F (107°C).
+n: **Check.** Slide in a cake tester, leave it 10 seconds, then touch it to your wrist. It should go in with no resistance and feel warm, not hot. That's about 125°F (52°C).
+n: **Beurre monté.** Bring just enough water (or cream) to cover the bottom of a small pan to a simmer. Whisk in cold, cubed unsalted butter a little at a time until it turns into a smooth sauce. Salt it and keep it warm, not hot, so it doesn't split.
+n: **Finish.** Scrape off any white albumin with an offset spatula, peel away the skin and cut out the dark bloodline. Coat the fish in beurre monté (or olive oil). The coating keeps it moist, and it lets you rewarm the fish for 20–30 seconds under a low broiler if you need to.
+[Section: Gentle shallow-poach (Le Bernardin's "unilateral" cooking)]
+n: **Prep.** Skin the fillet (hold the skin and wiggle it, not the knife), cut off the thin belly and trim to an even, rounded piece. Cut thin slices, about 3 oz (80 g) per portion of two slices, and trim out the bloodline with single straight strokes.
+n: **Season.** Sprinkle salt from a little height so it lands evenly.
+n: **Poach.** Set the fish in a pan and add water to come just under halfway up the sides, plus a little melted butter. Keep the heat very low; it should never go above a bare simmer. If your burner runs hot, set the pan on a rack or a cast-iron griddle. Brush the top with the cooking liquid as it goes, and brush the sides to clear away albumin.
+n: **Check.** It's done when a cake tester slides in easily and feels warm on your wrist, and the top of the fish feels warm, not hot. Lift it out with a fish spatula and blot on a towel.
+p: A splash of white wine in the poaching liquid, or poaching in court bouillon, are good variations.
+
+= Raw Fish at Home
+kind: guide
+from: Serious Eats | seriouseats.com
+note: What "sushi-grade" really means, and how to buy and prepare fish for sashimi, crudo or ceviche in your own kitchen. This covers fin fish and flatfish; raw shellfish is a separate subject.
+[Section: The short version]
+- **"Sushi-grade" isn't an official grade.** No agency grades fish the way the USDA grades beef. The label only means the seller considers the fish safe to eat raw, so it's only as trustworthy as the market.
+- **Tuna and farmed salmon are the only sure bets against parasites.** Eating other sea fish raw carries a small risk, about the same as any fish that isn't thoroughly cooked.
+- **Bacteria are the bigger danger.** Keep the fish cold and your hands, tools and work surface clean.
+[Section: Why tuna and farmed salmon]
+p: FDA guidelines (law in some places, such as New York, and advisory in others) say wild fish meant to be eaten raw must first be frozen at very low temperatures, as cold as −31°F (−35°C), to kill parasites. Home freezers can't reliably get that cold, which is why fish markets and sushi bars use "super freezers." Two kinds of fish are exempt: large tuna species (bigeye, yellowfin, bluefin and skipjack), which are eaten raw so widely with so few documented infections, and farmed fish such as salmon raised on parasite-free feed.
+[Section: Parasites]
+- Documented infections from raw fish are rare in the US, though some cause no symptoms and others go unreported.
+- The usual culprit in sea fish is the anisakis roundworm. It's often described as causing little more than an upset stomach, but a parasitologist interviewed for the guide warns that serious cases can end in surgery.
+- Freshwater fish, and fish like salmon that live in both fresh and salt water, can carry fish tapeworm. Skip raw freshwater fish, and the cod family (cod, haddock, pollock), which is especially prone to parasites and too watery to taste good raw anyway.
+- The acid in ceviche doesn't kill anisakis, and candling (holding a thin fillet over a strong light) misses some worms. Only proper freezing or cooking gets rid of them for certain.
+- Keep whole, ungutted fish cold. As a fish warms up, larvae in its gut start burrowing into the flesh.
+[Section: Bacteria and temperature]
+- Keep raw fish below 40°F (4°C). Tuna, mackerel, sardines and herring held warmer can build up histamine, which causes scombroid poisoning and isn't destroyed by cooking or freezing.
+- Bacteria grow with time as well as warmth. A short spell out of the fridge doesn't ruin a fish, but the colder you keep it, the longer it keeps and the safer it is.
+[Section: Buying fish to eat raw]
+- **Judge the market.** Good signs: fillets on trays over plenty of well-drained crushed ice, not touching each other; whole fish buried in ice; cutting boards that are cleaned and sanitized often; and a clean, briny smell rather than a fishy one.
+- **Buy whole fish when you can** and fillet them yourself. Freshness is much easier to judge on a whole fish: look for bright red gills, clear bulging eyes and firm, unblemished flesh. With a fillet, smell and firmness are all you have to go on.
+- **Ask about freezing.** If you want no parasite risk at all, ask whether the market has a super freezer and will freeze the fish for you. If not, stick to tuna and farmed salmon.
+[Section: Preparing it]
+n: **Keep it cold.** A container lined with ice packs gives fillets a cold place to wait while you work. Keep cut fish covered in the fridge, since home refrigerators are dry enough to dry it out.
+n: **Clean the fish.** Scale and gut it yourself, or have the market do that and do the filleting at home. Rinse out all the blood and guts under running water.
+n: **Sanitize.** Spray the counter and both sides of the cutting board with a solution of 1 tbsp bleach per gallon of water. Let it air-dry, or leave it at least 30 seconds before wiping dry. Dry the fish and the board well, and start with clean hands.
+n: **Switch surfaces.** After skinning the fillets, move them to a clean plate and clean the board (or flip it to the clean side) before slicing. Touch the flesh as little as possible.
+n: **Look for worms** as you slice, even in farmed or properly frozen fish; freezing kills parasites but doesn't remove them. Anisakis larvae are brown to white, about ⅜ inch (1 cm) long and coiled like a watch spring. Tapeworm larvae sit in a cyst that looks like a tiny grain of rice. Pick them out with your fingers or fish tweezers. Thin slices make them easier to spot.
+[Section: Serving ideas]
+p: Sashimi with soy sauce and wasabi or yuzu kosho; crudo with good olive oil and flaky salt; or a ceviche, kinilaw or aguachile.
+
+= Rescuing a Scorched Pan
+kind: guide
+from: HGTV (originally DIY Network) | hgtv.com
+[Section]
+- **Vinegar, then baking soda.** Cover the bottom with a thin layer of half water, half white vinegar and boil about 1 minute. Pour it out, sprinkle 1 tbsp baking soda into the empty pan (don't combine it with the vinegar), then scrub with a scouring pad and rinse.
+- **Coarse salt.** Scrub with kosher salt plus a little Dawn and hot water, or use half a lemon, cut side down, as the scrubber.
+- **Cream of tartar.** Boil 1 tbsp cream of tartar in 1 cup water in the pan, let it cool, then scrub.
+- **Dryer sheet.** Soak the pan for an hour in soapy water with a dryer sheet (or 1 tbsp fabric softener), then wash it well.
+- **Soda.** While the pan is still hot, pour in enough club soda (or cheap soda) to cover the bottom and let the fizz loosen the burnt bits, then wash.
+- **Alka-Seltzer.** Drop 1–2 tablets into hot water in the pan and let it sit.
+- **Ketchup.** Spread on a thin layer, wait 15 minutes and wipe clean. Best for dull or tarnished pans rather than heavy burns.
+p: **Never mix vinegar with bleach.** The fumes are toxic.
+
+= Caring for Ceramic Cookware
+kind: guide
+from: Cookware Judge | cookwarejudge.com
+note: For burned-on food, try these in order, then finish with a wash in warm soapy water, a rinse and a towel-dry.
+[Section]
+- **Baking soda simmer.** Add cold water and about 2 tbsp baking soda per quart, simmer a few minutes, let it cool and pour it out. Stir with a wooden or plastic spoon.
+- **Hydrogen peroxide** (good for big pots and enameled cast iron). Pour about 1 oz of fresh 3% hydrogen peroxide over the burned spot, let it bubble, then fill with water and leave it to soak. Don't heat it. Scrub gently with a soft toothbrush.
+- **Enzyme stain spray** (such as Shout). Spray the inside, wait a few minutes, then wash and rinse very thoroughly.
+- **Vinegar and baking soda** (ceramic-lined cast iron). Simmer 1 quart water, ¼ cup distilled white vinegar and 2 tsp baking soda in the pot, let it cool and pour it out. Repeat if needed.
+p: Burned rice or pasta can leave marks that won't come out.
+[Section: Do and don't]
+|! Do | Don't
+| Scrub with a soft brush or gauze | Use stiff brushes, steel wool, scouring powder, soap pads or scrubby sponges
+| Use wooden or plastic utensils | Use cooking sprays like Pam
+| Keep the heat moderate | Use olive oil, vegetable oil or shortening, which the guide says leave a gummy film
+
+= Favorite Sources
+kind: guide
+note: Three bookmarks in the collection are whole sites rather than single recipes.
+[Section]
+- **Hot Thai Kitchen** (hot-thai-kitchen.com). Pailin Chongchitnant's Thai recipes, each with a video tutorial. The Choo Chee Mackerel and the Kabocha Squash Stir-Fry in this book are hers.
+- **Souped Up Recipes** (youtube.com/c/SoupedUpRecipes). Mandy's YouTube channel of Chinese home cooking, source of the Cantonese Steamed Fish.
+- **Handle the Heat** (handletheheat.com). Tessa Arias's baking site, known for explaining the science behind cookies, cakes and breads.

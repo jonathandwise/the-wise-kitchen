@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cream">#FFFBF6EE</color>
+    <color name="launcher_bg">#FFFBF6EE</color>
+    <color name="launcher_fg">#FFB0522D</color>
+
+    <!-- The app itself is drawn with Compose; this only covers the moment before it starts. -->
+    <style name="Theme.WiseKitchen" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/cream</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
