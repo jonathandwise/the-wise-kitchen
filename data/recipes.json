@@ -1,14 +1,14 @@
 {
  "schema": 1,
- "version": 202611252115,
+ "version": 202611252121,
  "updated": "2026-11-25",
- "contentHash": "6c9eed109d5f4be7001d55c28fac165005404fffa46a1c4d6ad62229569b661e",
+ "contentHash": "37d00db01ff4123c6ebf2b49682a0f81aa1a98862d4a86fb60bd48c1654b0a99",
  "title": "The Wise Kitchen",
  "about": [
-  "Every recipe and kitchen note here comes from the Food/Recipes folder in Jonathan's bookmarks, gathered in November 2026: 91 recipes and 8 reference guides.",
+  "The recipes and kitchen notes here started as the Food/Recipes folder in Jonathan's bookmarks, gathered in November 2026, and new favorites are added as they turn up.",
   "Each recipe has been rewritten into the same layout, with ingredients, numbered steps and a few tips, and the original source just under the title. Blog stories and photos are left out, so visit the source if you want them.",
   "Quantities are as the original gave them (US cups and spoons, plus grams where the source used them). Temperatures are in °F with °C alongside. A few recipes come from YouTube videos; for those, the ingredients and steps were taken from the video and its description.",
-  "Only two bookmarks didn't make it in: Perfectly Crispy Bacon, a short Imgur clip that couldn't be opened while the book was being made; and Shaping Into A Pie, a pizza-dough shaping video that went offline when YouTube closed the channel that posted it."
+  "Only two of the original bookmarks didn't make it in: Perfectly Crispy Bacon, a short Imgur clip that couldn't be opened while the book was being made; and Shaping Into A Pie, a pizza-dough shaping video that went offline when YouTube closed the channel that posted it."
  ],
  "chapters": [
   {

@@ -1,0 +1,42 @@
+name: Cookbook PDF
+
+# Rebuilds "The Wise Kitchen.pdf" whenever the recipes change and the PDF wasn't updated with them.
+on:
+  push:
+    branches: [main]
+    paths: ["cookbook/**", "data/**", "tools/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pdf
+  cancel-in-progress: false
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the PDF if it's out of date
+        run: |
+          pip install -q reportlab pypdf
+          python3 tools/build_pdf.py --if-stale
+
+      - name: Commit the new PDF
+        run: |
+          if git diff --quiet -- "The Wise Kitchen.pdf" && git ls-files --error-unmatch "The Wise Kitchen.pdf" >/dev/null 2>&1; then
+            echo "No PDF changes."
+            exit 0
+          fi
+          git add "The Wise Kitchen.pdf"
+          git -c user.name="Wise Kitchen build" -c user.email="actions@users.noreply.github.com" commit -m "Update The Wise Kitchen.pdf"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
+          exit 1

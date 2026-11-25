@@ -41,5 +41,6 @@ n: A numbered step.
 
 `**bold**` works anywhere. Temperatures are written °F with °C alongside, e.g. `350°F (175°C)`.
 
-After editing, run `python3 tools/build_cookbook.py` and commit both the `.txt` file and
-`data/recipes.json`. The build checks that they match.
+After editing, run `python3 tools/build_cookbook.py` and commit the `.txt` file, `data/recipes.json`
+and `The Wise Kitchen.pdf`. The app build checks that the text and JSON match; the "Cookbook PDF"
+workflow rebuilds the PDF if it's behind.

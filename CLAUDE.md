@@ -8,10 +8,15 @@ He installs it from GitHub releases; installed copies update themselves.
 1. Edit or add to the right chapter file in `cookbook/` (format: `cookbook/FORMAT.md`). Rewrite the
    recipe into the book's house style: ingredients, numbered steps, a few tips, `from:` source line,
    °F with °C alongside, plain wording.
-2. Run `python3 tools/build_cookbook.py` (it validates the files and updates `data/recipes.json`).
-3. Commit both and push to `main`. The app downloads `data/recipes.json` from `main` on launch,
-   so no app release is needed for recipe changes.
-4. If the PDF in the claude.ai project should match, mention that the PDF hasn't changed.
+2. Run `python3 tools/build_cookbook.py`. It validates the files, updates `data/recipes.json` and
+   rebuilds `The Wise Kitchen.pdf` (the printable cookbook, via `tools/build_pdf.py`; needs
+   `pip install reportlab pypdf`, fonts are in `tools/fonts`).
+3. `git pull --rebase` first (the PDF workflow commits to `main`), then commit the `.txt`,
+   `data/recipes.json` and the PDF, and push. The app downloads `data/recipes.json` from `main` on
+   launch, so no app release is needed for recipe changes. If the PDF wasn't rebuilt, the
+   "Cookbook PDF" workflow rebuilds and commits it (the PDF's keywords hold the data's contentHash).
+4. Send Jonathan the new PDF and remind him the copy in the claude.ai project is a snapshot he can
+   replace; the repo's PDF is the current one.
 
 ## Building
 There is no Android SDK in Claude sessions (Google's Maven is blocked), so every build runs on GitHub

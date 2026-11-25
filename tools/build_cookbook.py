@@ -302,6 +302,17 @@ def main():
     changed = not previous or previous.get("contentHash") != data["contentHash"]
     print(f"{'Updated' if changed else 'No changes:'} data/recipes.json: {len(data['chapters'])} chapters, "
           f"{recipes} recipes, {guides} guides (version {data['version']})")
+    # Keep the printable cookbook in step (GitHub Actions also rebuilds it if this is skipped).
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import build_pdf
+    except ImportError as e:
+        print(f"PDF not rebuilt here ({e}); GitHub will rebuild The Wise Kitchen.pdf after the push.")
+        return
+    if build_pdf.OUT.exists() and build_pdf.pdf_hash() == data["contentHash"]:
+        print("The Wise Kitchen.pdf is up to date.")
+    else:
+        build_pdf.main()
 
 
 if __name__ == "__main__":
