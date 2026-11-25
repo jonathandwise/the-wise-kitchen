@@ -1,0 +1,8 @@
+11-25 21:37:42.564 I/WiseKitchen( 3205): recipes loaded version=202611252121 recipes=92 guides=9
+11-25 21:37:44.345 I/WiseKitchen( 3205): recipes up to date version=202611252121
+11-25 21:37:44.598 I/WiseKitchen( 3205): app update none (installed 10001, latest 10001)
+11-25 21:37:51.820 I/WiseKitchen( 3205): opened air-fryer-chicken-tenders
+11-25 21:38:00.406 I/WiseKitchen( 3205): opened garlic-herb-butter-roast-chicken
+11-25 21:38:06.583 I/WiseKitchen( 3205): opened dim-sum-chicken-feet-pressure-cooker
+11-25 21:38:14.625 I/WiseKitchen( 3205): opened sous-vide-cheat-sheet
+11-25 21:38:31.594 I/WiseKitchen( 3205): opened peking-duck

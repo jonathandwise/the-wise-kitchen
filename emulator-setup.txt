@@ -1,0 +1,44 @@
+SDK=/usr/local/lib/android/sdk
+crw-rw-rw- 1 root kvm 10, 232 Nov 25 21:34 /dev/kvm
+/dev/root       145G   36G  109G  25% /
+yes: standard output: Broken pipe
+Loading local repository...                                                     [=========                              ] 25% Loading local repository...       Auto-selecting single ABI x86_64
+phone.ini at: /home/runner/.android/avd/phone.ini
+/usr/local/lib/android/sdk/emulator/qemu/linux-x86_64/qemu-system-x86_64: error while loading shared libraries: libpulse.so.0: cannot open shared object file: No such file or directory
+phone
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+waiting for boot...
+booted after 45s
+[21:37:41] PASS: installs Performing Streamed Install
+Success
+[21:37:44] PASS: loads recipes 
+[21:37:49] screenshot 01-home.png
+[21:37:51] screenshot 02-home-scrolled.png
+[21:37:53] PASS: opens air-fryer-chicken-tenders 
+[21:37:55] screenshot 03-recipe-tenders.png
+[21:37:57] screenshot 04-recipe-tenders-scrolled1.png
+[21:38:00] screenshot 05-recipe-tenders-scrolled2.png
+[21:38:01] PASS: opens garlic-herb-butter-roast-chicken 
+[21:38:04] screenshot 06-recipe-big-text.png
+[21:38:06] screenshot 07-recipe-big-text-scrolled1.png
+[21:38:07] PASS: opens dim-sum-chicken-feet-pressure-cooker 
+[21:38:10] screenshot 08-recipe-substeps.png
+[21:38:12] screenshot 09-recipe-substeps-scrolled1.png
+[21:38:14] screenshot 10-recipe-substeps-scrolled2.png
+[21:38:16] PASS: opens sous-vide-cheat-sheet 
+[21:38:18] screenshot 11-guide-tables.png
+[21:38:20] screenshot 12-guide-tables-scrolled1.png
+[21:38:22] screenshot 13-guide-tables-scrolled2.png
+[21:38:26] screenshot 14-chapter-poultry.png
+[21:38:30] screenshot 15-search-miso.png
+[21:38:32] PASS: opens peking-duck 
+[21:38:34] screenshot 16-recipe-dark.png
+[21:38:36] screenshot 17-recipe-dark-scrolled1.png
+[21:38:40] screenshot 18-settings-dark.png
+[21:38:43] screenshot 19-settings-light.png
+[21:38:43] PASS: no crashes 
+[21:38:43] PASS: checked GitHub for recipes 
+[21:38:43] 9/9 checks passed
+OK: killing emulator, bye bye
+OK

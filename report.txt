@@ -1,0 +1,10 @@
+PASS  installs  Performing Streamed Install
+Success
+PASS  loads recipes  
+PASS  opens air-fryer-chicken-tenders  
+PASS  opens garlic-herb-butter-roast-chicken  
+PASS  opens dim-sum-chicken-feet-pressure-cooker  
+PASS  opens sous-vide-cheat-sheet  
+PASS  opens peking-duck  
+PASS  no crashes  
+PASS  checked GitHub for recipes  
