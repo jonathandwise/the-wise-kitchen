@@ -162,6 +162,8 @@ jobs:
 
       - name: Publish release
         run: |
+          exec > >(tee release-log.txt) 2>&1
+          set -x
           if [ "${{ needs.build.outputs.signing }}" != "permanent" ]; then
             echo "::warning::Not released: add the signing secrets (KEYSTORE_B64, KEYSTORE_PASSWORD, KEY_ALIAS, KEY_PASSWORD)."
             exit 0
@@ -201,3 +203,15 @@ jobs:
           gh release create "v$V" "rel/WiseKitchen-$V.apk" rel/latest.json \
             --title "Wise Kitchen $V" --notes-file rel/notes.md --target "${{ github.sha }}"
           echo "Released v$V"
+
+      - name: Keep the release log on the "release-log" branch
+        if: always()
+        run: |
+          mkdir -p rl
+          cp release-log.txt rl/ 2>/dev/null || echo "no log" > rl/release-log.txt
+          gh release list -L 5 > rl/releases.txt 2>&1 || true
+          cd rl
+          git init -q -b release-log
+          git add .
+          git -c user.name="Wise Kitchen build" -c user.email="actions@users.noreply.github.com" commit -qm "Release log for ${{ github.sha }}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" release-log
