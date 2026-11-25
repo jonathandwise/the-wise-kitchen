@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "version": 202611251844,
+ "version": 202611252115,
  "updated": "2026-11-25",
- "contentHash": "fdadf03e91565a26118ca58a3b31597d29400cfdf3e983006b9ea1a6a3b389ce",
+ "contentHash": "6c9eed109d5f4be7001d55c28fac165005404fffa46a1c4d6ad62229569b661e",
  "title": "The Wise Kitchen",
  "about": [
   "Every recipe and kitchen note here comes from the Food/Recipes folder in Jonathan's bookmarks, gathered in November 2026: 91 recipes and 8 reference guides.",
@@ -2409,7 +2409,7 @@
    "id": "pasta-and-casseroles",
    "number": 5,
    "title": "Pasta & Casseroles",
-   "blurb": "A classic meat lasagna, a creamy tortellini bake, a lighter cottage cheese Alfredo and an old-school chicken, broccoli and rice casserole.",
+   "blurb": "A classic meat lasagna, baked mac and cheese, a creamy tortellini bake, a lighter cottage cheese Alfredo and an old-school chicken, broccoli and rice casserole.",
    "items": [
     {
      "id": "broccoli-rice-cheese-and-chicken-casserole",
@@ -2570,6 +2570,81 @@
       }
      ],
      "tips": []
+    },
+    {
+     "id": "homemade-mac-and-cheese",
+     "kind": "recipe",
+     "title": "Homemade Mac and Cheese",
+     "added": "2026-11-25",
+     "serves": "4 (one 8-inch square dish)",
+     "time": "Prep 10 min · Cook 45 min",
+     "temp": "350°F / 175°C",
+     "source": {
+      "name": "Allrecipes · recipe by Judy",
+      "site": "allrecipes.com"
+     },
+     "note": "A creamy Cheddar and Parmesan sauce over elbow macaroni, under a buttery breadcrumb topping baked until golden and bubbling.",
+     "ingredients": [
+      {
+       "title": null,
+       "items": [
+        "8 oz uncooked elbow macaroni",
+        "¼ cup salted butter",
+        "3 tbsp all-purpose flour",
+        "2½ cups milk, plus up to ½ cup more as needed",
+        "2 cups shredded sharp Cheddar",
+        "½ cup finely grated Parmesan",
+        "Salt and black pepper"
+       ]
+      },
+      {
+       "title": "Topping",
+       "items": [
+        "2 tbsp salted butter",
+        "½ cup dry breadcrumbs",
+        "Pinch of paprika"
+       ]
+      }
+     ],
+     "method": [
+      {
+       "title": null,
+       "steps": [
+        {
+         "text": "Heat the oven to 350°F (175°C) and grease an 8-inch square baking dish."
+        },
+        {
+         "text": "Boil the macaroni in a large pot of lightly salted water, stirring now and then, until tender but still firm, about 8 minutes. Drain and tip it into the baking dish."
+        },
+        {
+         "text": "Meanwhile, melt the ¼ cup butter in a medium skillet over low heat. Whisk in the flour and cook 3–5 minutes, until it's a light golden paste."
+        },
+        {
+         "text": "Slowly whisk in the 2½ cups milk and bring to a simmer."
+        },
+        {
+         "text": "Stir in the Cheddar and Parmesan and season with salt and pepper. Keep stirring over low heat 3–5 minutes, until the cheese melts and the sauce thickens. Add up to ½ cup more milk if it's too thick."
+        },
+        {
+         "text": "Pour the sauce over the macaroni and stir until everything is coated."
+        },
+        {
+         "text": "**Topping:** Melt the 2 tbsp butter in a skillet over medium heat. Add the breadcrumbs and stir until coated and browned."
+        },
+        {
+         "text": "Spread the crumbs over the macaroni and sprinkle with paprika."
+        },
+        {
+         "text": "Bake about 30 minutes, until the topping is golden and the sauce is bubbling."
+        }
+       ]
+      }
+     ],
+     "tips": [
+      "Leftovers keep up to 4 days in an airtight container in the fridge. Reheat in the oven or microwave, stirring in a tablespoon or two of milk if it looks dry.",
+      "To freeze, pack cooled portions in freezer bags, wrap each in foil and freeze flat for up to 6 months. Thaw overnight in the fridge.",
+      "One reviewer makes it with almond milk and adds chicken for a chicken macaroni casserole."
+     ]
     },
     {
      "id": "worlds-best-lasagna",

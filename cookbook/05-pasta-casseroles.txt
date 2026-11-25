@@ -1,5 +1,5 @@
 #chapter Pasta & Casseroles
-#blurb A classic meat lasagna, a creamy tortellini bake, a lighter cottage cheese Alfredo and an old-school chicken, broccoli and rice casserole.
+#blurb A classic meat lasagna, baked mac and cheese, a creamy tortellini bake, a lighter cottage cheese Alfredo and an old-school chicken, broccoli and rice casserole.
 
 = Broccoli, Rice, Cheese, and Chicken Casserole
 serves: 8
@@ -72,6 +72,39 @@ note: Bookmarked as "Skinny Alfredo." A lighter fettuccine Alfredo: the creamy s
 - Pour the sauce into a large skillet and bring it to a simmer over medium heat. Cook, stirring often with a heatproof spatula, until thickened, 8–10 minutes. Stir in the spinach until it wilts.
 - Add the pasta to the skillet and toss to coat, loosening the sauce with some of the pasta water if it gets too thick.
 - Divide among bowls and sprinkle with red pepper flakes.
+
+= Homemade Mac and Cheese
+serves: 4 (one 8-inch square dish)
+time: Prep 10 min · Cook 45 min
+temp: 350°F / 175°C
+from: Allrecipes · recipe by Judy | allrecipes.com
+note: A creamy Cheddar and Parmesan sauce over elbow macaroni, under a buttery breadcrumb topping baked until golden and bubbling.
+[Ingredients]
+- 8 oz uncooked elbow macaroni
+- ¼ cup salted butter
+- 3 tbsp all-purpose flour
+- 2½ cups milk, plus up to ½ cup more as needed
+- 2 cups shredded sharp Cheddar
+- ½ cup finely grated Parmesan
+- Salt and black pepper
+[Ingredients: Topping]
+- 2 tbsp salted butter
+- ½ cup dry breadcrumbs
+- Pinch of paprika
+[Method]
+- Heat the oven to 350°F (175°C) and grease an 8-inch square baking dish.
+- Boil the macaroni in a large pot of lightly salted water, stirring now and then, until tender but still firm, about 8 minutes. Drain and tip it into the baking dish.
+- Meanwhile, melt the ¼ cup butter in a medium skillet over low heat. Whisk in the flour and cook 3–5 minutes, until it's a light golden paste.
+- Slowly whisk in the 2½ cups milk and bring to a simmer.
+- Stir in the Cheddar and Parmesan and season with salt and pepper. Keep stirring over low heat 3–5 minutes, until the cheese melts and the sauce thickens. Add up to ½ cup more milk if it's too thick.
+- Pour the sauce over the macaroni and stir until everything is coated.
+- **Topping:** Melt the 2 tbsp butter in a skillet over medium heat. Add the breadcrumbs and stir until coated and browned.
+- Spread the crumbs over the macaroni and sprinkle with paprika.
+- Bake about 30 minutes, until the topping is golden and the sauce is bubbling.
+[Tips]
+- Leftovers keep up to 4 days in an airtight container in the fridge. Reheat in the oven or microwave, stirring in a tablespoon or two of milk if it looks dry.
+- To freeze, pack cooled portions in freezer bags, wrap each in foil and freeze flat for up to 6 months. Thaw overnight in the fridge.
+- One reviewer makes it with almond milk and adds chicken for a chicken macaroni casserole.
 
 = World's Best Lasagna
 serves: 12
