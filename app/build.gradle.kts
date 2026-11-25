@@ -7,7 +7,7 @@ plugins {
 // The version to release. Bump it (and add a CHANGELOG.md section) to publish an app update:
 // the build workflow releases every version that doesn't have a GitHub release yet.
 // New recipes don't need an app release: the app downloads data/recipes.json by itself.
-val appVersion = "1.0.0"
+val appVersion = "1.0.1"
 
 val versionParts = appVersion.split(".").map { it.toInt() }
 val keystorePath: String? = System.getenv("KEYSTORE_PATH")?.takeIf { file(it).exists() }

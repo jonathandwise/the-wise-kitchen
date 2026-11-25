@@ -35,6 +35,11 @@ import com.wisekitchen.app.data.Guide
 import com.wisekitchen.app.data.Item
 import com.wisekitchen.app.data.Recipe
 
+/** "2026-11-25" as "Nov 25, 2026". */
+fun prettyDate(iso: String): String = runCatching {
+    java.time.LocalDate.parse(iso).format(java.time.format.DateTimeFormatter.ofPattern("MMM d, yyyy", java.util.Locale.US))
+}.getOrDefault(iso)
+
 /** Turns **bold** markers in cookbook text into bold spans. */
 fun rich(text: String): AnnotatedString = buildAnnotatedString {
     var rest = text

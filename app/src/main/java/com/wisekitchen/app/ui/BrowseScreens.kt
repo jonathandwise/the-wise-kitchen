@@ -86,7 +86,7 @@ fun HomeScreen(
                 items(book.chapters, key = { "ch-" + it.id }) { ch -> ChapterCard(ch) { onChapter(ch) } }
                 item {
                     Text(
-                        "${book.recipeCount} recipes · ${book.guideCount} guides" + (book.updated?.let { " · updated $it" } ?: ""),
+                        "${book.recipeCount} recipes · ${book.guideCount} guides" + (book.updated?.let { " · updated ${prettyDate(it)}" } ?: ""),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.fillMaxWidth().padding(20.dp),

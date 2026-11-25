@@ -111,7 +111,7 @@ fun SettingsScreen(
 
                 Text("Recipes", style = MaterialTheme.typography.titleMedium)
                 Text(
-                    "${book.recipeCount} recipes and ${book.guideCount} guides" + (book.updated?.let { ", updated $it" } ?: ""),
+                    "${book.recipeCount} recipes and ${book.guideCount} guides" + (book.updated?.let { ", updated ${prettyDate(it)}" } ?: ""),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

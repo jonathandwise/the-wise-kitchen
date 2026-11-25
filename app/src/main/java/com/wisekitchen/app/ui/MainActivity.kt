@@ -30,6 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.ui.Alignment
@@ -49,9 +50,13 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        if (savedInstanceState == null) pending = routesFrom(intent)
         val g = (application as App).graph
+        if (g.settings.theme.value == ThemeMode.LIGHT) {
+            enableEdgeToEdge(SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT), SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT))
+        } else {
+            enableEdgeToEdge()
+        }
+        if (savedInstanceState == null) pending = routesFrom(intent)
         setContent {
             val theme by g.settings.theme.collectAsState()
             WiseKitchenTheme(theme) {
@@ -116,12 +121,20 @@ private fun AppContent(activity: MainActivity) {
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
+    val pageStates = rememberSaveableStateHolder()
+    fun pageKey(i: Int) = "$i:${stack[i]}"
     fun go(route: String) { stack.add(route) }
-    fun back() { if (stack.size > 1) stack.removeAt(stack.lastIndex) }
+    fun back() {
+        if (stack.size > 1) {
+            pageStates.removeState(pageKey(stack.lastIndex))
+            stack.removeAt(stack.lastIndex)
+        }
+    }
 
     val pendingRoutes = activity.pendingRoutes
     LaunchedEffect(pendingRoutes) {
         if (pendingRoutes != null) {
+            stack.indices.forEach { pageStates.removeState(pageKey(it)) }
             stack.clear(); stack.addAll(pendingRoutes)
             if (activity.initialQuery.isNotEmpty()) query = activity.initialQuery
             activity.clearPending()
@@ -167,6 +180,7 @@ private fun AppContent(activity: MainActivity) {
     val route = stack.last()
 
     Box(Modifier.fillMaxSize()) {
+      pageStates.SaveableStateProvider(pageKey(stack.lastIndex)) {
         when {
             route == "home" -> HomeScreen(
                 book = book,
@@ -229,6 +243,7 @@ private fun AppContent(activity: MainActivity) {
             )
             else -> LaunchedEffect(route) { stack.clear(); stack.add("home") }
         }
+      }
 
         SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter).navigationBarsPadding().padding(12.dp)) { Snackbar(it) }
     }
