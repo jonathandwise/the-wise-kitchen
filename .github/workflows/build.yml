@@ -127,7 +127,11 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
 
+      - name: Start the results folder
+        run: mkdir -p results && echo "emulator step starting" > results/status.txt
+
       - name: Run Wise Kitchen on a phone emulator (Android 13)
+        id: emu
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 33
@@ -136,12 +140,13 @@ jobs:
           profile: pixel_6
           disable-animations: true
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          script: python3 ci/e2e.py results out/WiseKitchen.apk
+          script: bash ci/run_e2e.sh out/WiseKitchen.apk
 
       - name: Publish screenshots and logs to the "test-results" branch
         if: always()
         run: |
           mkdir -p results
+          echo "emulator step: ${{ steps.emu.outcome }}" >> results/status.txt
           cp out/build-info.txt results/ 2>/dev/null || true
           cd results
           git init -q -b test-results

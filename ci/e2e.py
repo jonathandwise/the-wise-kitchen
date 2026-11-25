@@ -137,4 +137,13 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:  # keep whatever was gathered
+        import traceback
+        traceback.print_exc()
+        with open(os.path.join(OUT, "report.txt"), "a") as f:
+            for name, ok, detail in checks:
+                f.write(f"{'PASS' if ok else 'FAIL'}  {name}  {detail}\n")
+            f.write(f"FAIL  script error  {e!r}\n")
+        sys.exit(1)
