@@ -1,0 +1,5 @@
++ '[' permanent '!=' permanent ']'
++ gh release view v1.0.1
++ echo 'v1.0.1 is already released; bump appVersion in app/build.gradle.kts to release again.'
+v1.0.1 is already released; bump appVersion in app/build.gradle.kts to release again.
++ exit 0
